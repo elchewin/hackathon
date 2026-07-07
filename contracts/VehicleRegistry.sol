@@ -4,6 +4,12 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
+/*
+Este contrato representa el registro vehicular del proyecto final.
+Cada vehiculo se registra como un NFT ERC721 y las instituciones autorizadas
+pueden emitir documentos asociados como SOAP, permiso de circulacion y revision tecnica.
+*/
+
 contract VehicleRegistry is ERC721, AccessControl {
     bytes32 public constant REGISTRO_CIVIL_ROLE = keccak256("REGISTRO_CIVIL_ROLE");
     bytes32 public constant MUNICIPALIDAD_ROLE = keccak256("MUNICIPALIDAD_ROLE");

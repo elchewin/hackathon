@@ -3,6 +3,12 @@ pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
+/*
+Este contrato almacena documentos digitales asociados a vehiculos del proyecto final.
+Cada institucion autorizada puede registrar el hash y vencimiento del documento
+que le corresponde, permitiendo verificar su estado de forma publica.
+*/
+
 contract VehicleDocuments is AccessControl {
     bytes32 public constant MUNICIPALIDAD_ROLE = keccak256("MUNICIPALIDAD_ROLE");
     bytes32 public constant ASEGURADORA_ROLE   = keccak256("ASEGURADORA_ROLE");
